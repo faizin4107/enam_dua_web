@@ -154,7 +154,6 @@ class BussinessController extends Controller
         $categories = $request->input('categories');
         $listCategories = [];
         foreach($categories as $row){
-            // $name = $request->input('name');
             $nameToLower = strtolower($row);
             $splitName = explode(' ', $nameToLower);
             $listCategories[] = implode('-', $splitName);
