@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/bussiness', [BussinessController::class, "index"]);
+Route::get('/', [BussinessController::class, "index"]);
 Route::post('/bussiness/store', [BussinessController::class, "store"])->name('bussiness.store');
 Route::get('/bussiness/edit/{id}', [BussinessController::class, "edit"]);
 Route::put('/bussiness/update/{id}', [BussinessController::class, "update"]);

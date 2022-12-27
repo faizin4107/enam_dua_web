@@ -195,7 +195,7 @@ class BussinessController extends Controller
             'state' => $request->input('state'),
         ]);
 
-        return redirect('/bussiness')->with('success', 'Update data successfully');
+        return redirect('/')->with('success', 'Update data successfully');
 
        
 
