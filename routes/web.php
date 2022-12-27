@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\bussiness\BussinessController;
 use App\Http\Controllers\Bussiness\ReviewsController;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    // return redirect('/bussiness', [BussinessController::class, 'index']);
+    return Redirect::to('/bussiness');
+});
 
-Route::get('/', [BussinessController::class, "index"]);
+
+Route::get('/bussiness', [BussinessController::class, "index"]);
 Route::post('/bussiness/store', [BussinessController::class, "store"])->name('bussiness.store');
 Route::get('/bussiness/edit/{id}', [BussinessController::class, "edit"]);
 Route::put('/bussiness/update/{id}', [BussinessController::class, "update"]);
